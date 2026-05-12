@@ -33,3 +33,21 @@ variable "echo_url" {
   type        = string
   default     = ""
 }
+
+variable "custom_domain_name" {
+  description = "Optional custom domain for the API, such as webhook.example.com. Leave empty to use the default API Gateway URL."
+  type        = string
+  default     = ""
+}
+
+variable "route53_zone_id" {
+  description = "Optional existing public Route53 hosted zone ID used for ACM DNS validation and the API alias record."
+  type        = string
+  default     = ""
+}
+
+variable "route53_zone_name" {
+  description = "Optional existing public Route53 hosted zone name, such as example.com. Used only when route53_zone_id is empty."
+  type        = string
+  default     = ""
+}

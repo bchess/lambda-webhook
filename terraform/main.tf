@@ -1,5 +1,6 @@
 locals {
-  project_name = var.project_name
+  project_name          = var.project_name
+  custom_domain_enabled = var.custom_domain_name != ""
   source_files = [
     "${path.module}/../src/app.py",
     "${path.module}/../src/requirements.txt",
